@@ -2,5 +2,5 @@
 
 El primer proyecto que he creado en Unity. Para fines educativos.
 
-##Autor
+## Autor
 * Luis García (MrLuigi002)
