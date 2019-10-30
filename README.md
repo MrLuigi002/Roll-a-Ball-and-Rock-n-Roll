@@ -1,6 +1,6 @@
 # Roll a Ball and Rock n' Roll
 
-El primer proyecto que he creado en Unity. Para fines educativos.
+My first project in Unity. For educational porpuses.
 
 ## Autor
 * Luis García (MrLuigi002)
