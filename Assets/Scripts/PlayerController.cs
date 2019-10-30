@@ -7,9 +7,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody myRigidbody;
     public float speed;
 
+    public int score;
+
     // Start is called before the first frame update
     void Start()
-    {      
+    {
+        score = 0;      //Resetea la puntuación al iniciar el juego.
     }
 
     // Update is called once per frame
@@ -31,6 +34,9 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))      //Solo se ejecuta si el Game Object tiene el Tag "Pickup" asignado.
         {
             other.gameObject.SetActive(false);          //Desactiva el objeto, dando la ilusión de que se ha destruido.
+
+            score += other.gameObject.GetComponent<Pickup>().points;                                    //Suma uno a la puntuación al recoger el objeto.
+            Debug.Log("Score:" + score);
         }
     }
 
