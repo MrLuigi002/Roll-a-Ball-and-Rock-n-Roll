@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public int points = 1;
+    public int value = 1;
 
     // Start is called before the first frame update
     void Start()

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;      //Resetea la puntuación al iniciar el juego.
+        score = 0;    //Resetea la puntuación al iniciar el juego.
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);          //Desactiva el objeto, dando la ilusión de que se ha destruido.
 
-            score += other.gameObject.GetComponent<Pickup>().points;                                    //Suma uno a la puntuación al recoger el objeto.
+            score += other.gameObject.GetComponent<Pickup>().value;      //Suma uno a la puntuación al recoger el objeto.
             Debug.Log("Score:" + score);
         }
     }
