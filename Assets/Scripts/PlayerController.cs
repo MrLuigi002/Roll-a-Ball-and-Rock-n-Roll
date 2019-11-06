@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody myRigidbody;
     public float speed;
     public Text scoreText;
+    public bool growMechanic = false;
 
     public int score;
 
@@ -43,7 +44,11 @@ public class PlayerController : MonoBehaviour
             scoreText.text = "Score: " + score;
             //Debug.Log("Score:" + score);
 
+            if (growMechanic == true)
+            {
             transform.localScale += new Vector3((other.gameObject.GetComponent<Pickup>().value * 0.5f), (other.gameObject.GetComponent<Pickup>().value * 0.5f), (other.gameObject.GetComponent<Pickup>().value * 0.5f));
+            }
+            
         }
     }
 

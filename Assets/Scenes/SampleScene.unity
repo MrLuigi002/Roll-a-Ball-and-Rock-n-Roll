@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.439803, g: 0.48823804, b: 0.56845224, a: 1}
+  m_IndirectSpecularColor: {r: 0.43980348, g: 0.48823893, b: 0.56845266, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -462,7 +462,7 @@ PrefabInstance:
     - target: {fileID: 2782267218503498426, guid: c2f29462984243546b3b98b507e3883b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.91025
+      value: 132.6102
       objectReference: {fileID: 0}
     - target: {fileID: 2782267218503498426, guid: c2f29462984243546b3b98b507e3883b,
         type: 3}
@@ -746,6 +746,7 @@ MonoBehaviour:
   myRigidbody: {fileID: 487757194}
   speed: 10
   scoreText: {fileID: 97524287}
+  growMechanic: 0
   score: 0
 --- !u!1 &534669902
 GameObject:
@@ -994,7 +995,7 @@ PrefabInstance:
     - target: {fileID: 3090141895539511250, guid: 81e10ae6ac768744f8d6a78fcfaa4805,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.91025
+      value: 132.6102
       objectReference: {fileID: 0}
     - target: {fileID: 3090141895539511250, guid: 81e10ae6ac768744f8d6a78fcfaa4805,
         type: 3}
@@ -1359,7 +1360,7 @@ PrefabInstance:
     - target: {fileID: 2782267218503498426, guid: c2f29462984243546b3b98b507e3883b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.91025
+      value: 132.6102
       objectReference: {fileID: 0}
     - target: {fileID: 2782267218503498426, guid: c2f29462984243546b3b98b507e3883b,
         type: 3}
@@ -1428,7 +1429,7 @@ PrefabInstance:
     - target: {fileID: 3090141895539511250, guid: 81e10ae6ac768744f8d6a78fcfaa4805,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.91025
+      value: 132.6102
       objectReference: {fileID: 0}
     - target: {fileID: 3090141895539511250, guid: 81e10ae6ac768744f8d6a78fcfaa4805,
         type: 3}
