@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
             scoreText.text = "Score: " + score;
             //Debug.Log("Score:" + score);
+
+            transform.localScale += new Vector3((other.gameObject.GetComponent<Pickup>().value * 0.5f), (other.gameObject.GetComponent<Pickup>().value * 0.5f), (other.gameObject.GetComponent<Pickup>().value * 0.5f));
         }
     }
 
