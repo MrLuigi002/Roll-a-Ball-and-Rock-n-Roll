@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody myRigidbody;
     public float speed;
+    public Text scoreText;
 
     public int score;
 
@@ -36,7 +38,8 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);          //Desactiva el objeto, dando la ilusión de que se ha destruido.
 
             score += other.gameObject.GetComponent<Pickup>().value;      //Suma uno a la puntuación al recoger el objeto.
-            Debug.Log("Score:" + score);
+            scoreText.text = "Score: " + score;
+            //Debug.Log("Score:" + score);
         }
     }
 
