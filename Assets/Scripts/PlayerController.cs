@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody myRigidbody;
     public float speed;
-
     public int score;
+    public TextMeshPro scoreSet;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,10 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);          //Desactiva el objeto, dando la ilusión de que se ha destruido.
 
             score += other.gameObject.GetComponent<Pickup>().value;      //Suma uno a la puntuación al recoger el objeto.
-            Debug.Log("Score:" + score);
+                       
+            scoreSet.SetText("Score: {0}", score);
+            
+            //Debug.Log("Score:" + score);
         }
     }
 
