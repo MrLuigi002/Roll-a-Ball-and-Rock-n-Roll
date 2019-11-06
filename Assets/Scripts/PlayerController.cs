@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);          //Desactiva el objeto, dando la ilusión de que se ha destruido.
 
             score += other.gameObject.GetComponent<Pickup>().value;      //Suma uno a la puntuación al recoger el objeto.
+
             scoreText.text = "Score: " + score;
             //Debug.Log("Score:" + score);
         }
