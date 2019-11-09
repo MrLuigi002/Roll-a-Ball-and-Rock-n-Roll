@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuScript : MonoBehaviour
 {
 
-    public GameObject Player;
+    public GameObject player;
     public Vector3 offset = new Vector3(0, 0, 0);
 
     Animator animator;
@@ -13,6 +13,7 @@ public class MenuScript : MonoBehaviour
     
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
         menuState = false;
     }
@@ -20,7 +21,7 @@ public class MenuScript : MonoBehaviour
     
     void Update()
     {
-        Vector3 playerPos = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z) + offset;
+        Vector3 playerPos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z) + offset;
         transform.position = playerPos;
 
         if(Input.GetKeyDown(KeyCode.Return) && menuState == false)
