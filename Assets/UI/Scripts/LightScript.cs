@@ -22,7 +22,7 @@ public class LightScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && lightState == false)
+        if (Input.GetKeyDown(KeyCode.Return) && lightState == false)
         {
             lightState = true;
             anim.SetTrigger ("Switch");
