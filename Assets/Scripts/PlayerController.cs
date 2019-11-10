@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ShopCoroutine(GameObject timetoBuy)
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         timetoBuy.gameObject.SetActive(true);
         yield return null;
     }
