@@ -10,18 +10,25 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text scoreText;
     public bool growMechanic = false;
+    public GameObject timetoBuy;
+    bool scoreReached = false;
 
     public int score;
 
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;    //Resetea la puntuación al iniciar el juego.
+        score = 0;    //Resetea la puntuación al iniciar el juego.       
     }
 
     // Update is called once per frame
     void Update()
     {       
+        if (score == 20 && scoreReached == false)
+        {
+            scoreReached = true;
+            StartCoroutine(ShopCoroutine(timetoBuy));
+        }
     }
 
     private void FixedUpdate()
@@ -50,6 +57,13 @@ public class PlayerController : MonoBehaviour
             }
             
         }
+    }
+
+    IEnumerator ShopCoroutine(GameObject timetoBuy)
+    {
+        yield return new WaitForSeconds(6f);
+        timetoBuy.gameObject.SetActive(true);
+        yield return null;
     }
 
 
