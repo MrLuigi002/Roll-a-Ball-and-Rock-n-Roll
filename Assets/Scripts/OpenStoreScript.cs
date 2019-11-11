@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenStoreScript : MonoBehaviour
 {
     public GameObject storeWindow;
-    bool active;
+    public bool active;
 
     public void OpenStore(GameObject storeWindow)
     {

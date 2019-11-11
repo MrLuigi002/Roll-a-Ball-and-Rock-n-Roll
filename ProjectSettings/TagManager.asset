@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pickup
   - StorePromt
+  - Store
   layers:
   - Default
   - TransparentFX
