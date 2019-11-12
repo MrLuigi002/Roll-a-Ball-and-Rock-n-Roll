@@ -5,13 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+
+    public GameObject loadBar;
+
     public void NewGameBtn(string newGameLevel)
     {
-        SceneManager.LoadScene(newGameLevel);
+        //loadBar.gameObject.GetComponent<Animator>().SetTrigger("Load");
+        //loadBar.gameObject.SetActive(true);
+        
+        StartCoroutine(NewGame(newGameLevel));
+        //SceneManager.LoadScene(newGameLevel);
     }
 
     public void ExitGameBtn()
     {
         Application.Quit();
+    }
+
+    IEnumerator NewGame(string newGameLevel)
+    {
+
+        //loadBar.gameObject.GetComponent<Animator>().SetTrigger("Load");
+
+        loadBar.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(9);
+
+        SceneManager.LoadScene(newGameLevel);
+        yield return null;
     }
 }
